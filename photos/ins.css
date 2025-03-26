@@ -25,7 +25,7 @@
 	display: inline;
 }
 .instagram .thumb {
-	width: 25%;
+	width: 100%;
 	height: 0; 
 	padding-bottom: 25%;
 	position: relative;
@@ -43,31 +43,33 @@
 	margin-left: 10px;
 }
 .instagram .album ul{
-	display: flex;
-	flex-wrap: wrap;
-	clear: both;
+	display: grid; /* 改用grid布局 */
+	grid-template-columns: repeat(2, 1fr); /* 改为两列布局，让照片更大 */
+	gap: 450px; /* 增加间距 */
 	width: 100%;
+	max-width: 1200px; /* 限制最大宽度 */
+	margin: 0 auto; /* 居中显示 */
 	text-align: left;
+	margin-bottom: 100px; /* 相册组底部间距 */
 }
 .instagram .album li{
 	list-style: none;
-	display: inline-block;
-	box-sizing: border-box;
-	padding: 0 5px;
-	margin-bottom: -10px;
-	height: 0;
-	width: 25%;
 	position: relative;
-	padding-bottom: 25%;
+	width: 100%; /* 宽度100% */
+	padding-bottom: 100%; /* 保持正方形比例 */
+	margin-bottom: 100px; /* 移除底部外边距 */
+	height: 0;
 }
-.instagram .album li:before{
-	display: none;
-}
+
 .instagram .album div.img-box{
 	position: absolute;
-	width: 90%;
-	height: 90%;
-	box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%; /* 增强阴影效果 */
+	box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+	border-radius: 12px; /* 增加圆角 */
+	overflow: hidden;
 }
 .instagram .album div.img-box img{
 	width: 100%;
@@ -135,4 +137,49 @@
 		width: 90%;
 		height: 90%;
 	}
+}
+
+/* 添加年份标题与相册的间距 */
+.instagram .year {
+	font-size: 50px;
+	margin-bottom: 100px; /* 减小年份与相册的间距 */
+	margin-top: 50%; /* 保持年份上方间距 */
+	font-weight: bold;
+	text-align: center; /* 居中对齐 */
+	display: block; /* 确保年份标题独占一行 */
+}
+
+/* 调整相册底部间距 */
+.instagram .album {
+	margin-bottom: 250px; /* 增加相册底部间距 */
+	position: relative; /* 添加相对定位 */
+}
+
+/* 移动端适配 */
+@media screen and (max-width:600px) {
+	.instagram .album ul {
+		grid-template-columns: repeat(1, 1fr); /* 移动端单列 */
+		gap: 200px;
+	}
+	
+	.instagram .album li {
+		width: 100%;
+		padding-bottom: 100%;
+	}
+}
+
+/* 大屏幕适配 */
+@media screen and (min-width:1600px) {
+  .instagram .album ul {
+    max-width: 2160px; /* 大屏幕下增加最大宽度 */
+    grid-template-columns: repeat(3, 1fr); /* 大屏幕可以显示三列 */
+  }
+}
+
+/* 平板适配 */
+@media screen and (min-width:601px) and (max-width:900px) {
+  .instagram .album ul {
+    grid-template-columns: repeat(2, 1fr); /* 平板两列 */
+    max-width: 800px;
+  }
 }
