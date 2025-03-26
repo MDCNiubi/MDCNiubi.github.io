@@ -66,14 +66,14 @@
 
 .post-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 20px;
 }
 .post-list .post-list-item {
   position: relative;
   border-radius: 8px;
   overflow: hidden;
-  height: 350px;
+  height: 300px;
   background-color: var(--color-bg-secondary);
   background-size: cover;
   background-position: center;
