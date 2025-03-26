@@ -3,6 +3,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 @supports (animation-timeline: scroll()) {
   .hero.exit-while-scroll {
@@ -48,6 +52,11 @@
   margin: 0;
   transition: font-size 0.5s;
 }
+@media (max-width: 1200px) {
+  .hero .sub {
+    font-size: 20px;
+  }
+}
 @media (max-width: 800px) {
   .hero .sub {
     font-size: 16px;
@@ -58,16 +67,39 @@
   margin: 0;
   transition: font-size 0.5s;
 }
+@media (max-width: 1200px) {
+  .hero .large {
+    font-size: 100px;
+  }
+}
 @media (max-width: 800px) {
   .hero .large {
     font-size: 84px;
   }
 }
+@media (max-width: 480px) {
+  .hero .large {
+    font-size: 60px;
+  }
+}
 
 .post-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .post-list {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+}
+@media (min-width: 1200px) {
+  .post-list {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
 }
 .post-list .post-list-item {
   position: relative;
@@ -154,4 +186,17 @@
   position: relative;
   z-index: 2;
   color: #fff;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
 }

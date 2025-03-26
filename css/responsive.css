@@ -1,0 +1,158 @@
+/* 全局响应式设计 */
+/* 4K 分辨率支持 */
+@media (min-width: 2560px) {
+  .container, .content, .hero, .post-list {
+    max-width: 2400px;
+  }
+  
+  .hero .large {
+    font-size: 180px;
+  }
+  
+  .hero .sub {
+    font-size: 36px;
+  }
+  
+  .post-list {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  }
+  
+  .post-list-item {
+    height: 400px;
+  }
+}
+
+/* 超宽屏幕支持 */
+@media (min-width: 1921px) and (max-width: 2559px) {
+  .container, .content, .hero, .post-list {
+    max-width: 1800px;
+  }
+  
+  .hero .large {
+    font-size: 150px;
+  }
+  
+  .hero .sub {
+    font-size: 30px;
+  }
+  
+  .post-list {
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  }
+}
+
+/* 宽屏支持 */
+@media (min-width: 1401px) and (max-width: 1920px) {
+  .container, .content, .hero, .post-list {
+    max-width: 1600px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .container, .content, .hero, .post-list {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container, .content, .hero, .post-list {
+    max-width: 992px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container, .content, .hero, .post-list {
+    max-width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container, .content, .hero, .post-list {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
+
+/* 导航栏响应式 */
+@media (min-width: 2560px) {
+  .nav-container {
+    max-width: 2400px;
+    margin: 0 auto;
+  }
+  
+  .nav-container .nav-item {
+    font-size: 20px;
+    margin: 0 15px;
+  }
+}
+
+@media (min-width: 1921px) and (max-width: 2559px) {
+  .nav-container {
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+  
+  .nav-container .nav-item {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 10px;
+  }
+}
+
+/* 页脚响应式 */
+@media (min-width: 2560px) {
+  .footer {
+    max-width: 2400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1921px) and (max-width: 2559px) {
+  .footer {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 10px;
+  }
+}
+
+/* 文章内容响应式 */
+@media (min-width: 2560px) {
+  .content {
+    font-size: 18px;
+  }
+  
+  .content h1 {
+    font-size: 36px;
+  }
+  
+  .content h2 {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1921px) and (max-width: 2559px) {
+  .content {
+    font-size: 16px;
+  }
+  
+  .content h1 {
+    font-size: 32px;
+  }
+  
+  .content h2 {
+    font-size: 28px;
+  }
+}
